@@ -8,8 +8,9 @@ class GlobalVar extends Component {
     for (const key in inputs) {
       const regResult = reg.exec(inputs[key])
       if (regResult) {
-        const file = path.join(process.cwd(), inputs[key].slice(7, -2))
-        const yaml = yamljs.load(file)
+        const inputPath = inputs[key].slice(7, -2)
+        // const file = inputPath[0] == '/' ? inputPath : path.join(process.cwd(), inputPath)
+        const yaml = yamljs.load(inputPath)
         const jsonStr = JSON.stringify(yaml)
         const jsonTemp = JSON.parse(jsonStr, null)
         if (jsonTemp) {
