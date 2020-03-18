@@ -2,7 +2,7 @@
 
 在使用Serverless Framework Components的时候，会遇到配置一些全局变量，例如我有多个函数，需要配置数据库等信息，但是在Serverless Framework Components中貌似并不能支持全局变量，所以做了这个非常简单的组件来实现。
 
-使用防范很简单，在Yaml中增加全局配置的字段：
+使用方法很简单，在Yaml中增加全局配置的字段：
 
 ```yaml
 Conf:
