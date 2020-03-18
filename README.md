@@ -15,9 +15,13 @@ Conf:
     mysql_db: mytest
     mini_program_app_id: mytest
     mini_program_app_secret: mytest
+    tst:  ${file(./serverless_1.yaml)}
 ```
 
 然后在项目部署的时候可以直接放到对应的组件内，例如：`${Conf.mysql_host}`
+
+如果需要引用其他yaml，可以使用上面的`tst:  ${file(./serverless_1.yaml)}`写法，其他程序引用只需要：
+`mysql_host: ${Conf.tst.mysql_hosta}`即可
 
 整体Yaml可以这样：
 

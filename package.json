@@ -1,6 +1,6 @@
 {
   "name": "serverless-global",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "./serverless.js",
   "publishConfig": {
     "access": "public"
@@ -16,7 +16,9 @@
   "author": "Dfounderliu",
   "license": "Apache",
   "dependencies": {
-    "@serverless/core": "^1.0.0"
+    "@serverless/core": "^1.0.0",
+    "path": "^0.12.7",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "babel-eslint": "9.0.0",
